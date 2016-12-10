@@ -1,0 +1,24 @@
+.outer-container {
+  padding: $m-gutter;
+}
+
+.container {
+  max-width: $m-content;
+  margin: auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$m-gutter;
+
+  &__item {
+    flex-basis: calc(100% / 3 - #{$m-gutter} - #{$m-gutter});
+    flex-grow: 1;
+    margin: $m-gutter;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}

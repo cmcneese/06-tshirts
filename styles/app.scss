@@ -15,29 +15,13 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 @import 'reset';
-
-.outer-container{
-  padding: $m-gutter;
-}
-
-.container {
-  max-width: $m-content;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: $m-gutter;
-}
-
-.grid__item {
-  border: $c-primary solid 0.2rem;
-
-}
+@import "layout";
 
 .shop-item {
+  min-width: 12rem;
   margin: 0;
   padding: $m-gutter;
+  border: $c-primary solid 0.2rem;
 
   &__title {
     text-align: center;
@@ -45,13 +29,16 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 }
 
 .shop-item__actions {
-
-}
-
-.shop-item__actions-btn {
+  display: grid;
   border: $c-primary solid 0.1rem;
-  background: $c-white;
+
+  &__actions-btn {
+    border: $c-primary solid 0.1rem;
+    background: $c-white;
+
+  }
 }
+
 
 .fa.fa-refresh {
   color: $c-primary;
