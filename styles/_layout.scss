@@ -18,6 +18,12 @@
     margin: $m-gutter;
   }
 
+  @media (min-width: 501px) and (max-width: 720px) {
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+
   @media (max-width: 500px) {
     flex-direction: column;
   }
