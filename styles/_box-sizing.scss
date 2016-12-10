@@ -1,13 +1,15 @@
 // apply a natural box layout model to all elements, but allowing components to change
 html {
+  color: $c-primary;
   box-sizing: border-box;
+
 }
 
 * {
   box-sizing: inherit;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     box-sizing: inherit;
   }
 }
