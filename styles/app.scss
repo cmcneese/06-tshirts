@@ -80,8 +80,14 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
   position: relative;
   color: $c-primary;
 
+  &:hover {
+    .shop-menu__tooltip {
+      display: flex;
+    }
+  }
+
   &__tooltip {
-    display: flex;
+    display: none;
     flex-direction: column;
 
     position: absolute;
