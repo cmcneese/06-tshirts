@@ -37,12 +37,39 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
   }
 
   &__actions {
+    display: flex;
     align-self: stretch;
     border-top: $c-primary solid 0.2rem;
   }
 
+  &__actions-btn {
+    flex-grow: 1;
+    border: 0;
+    border-left: $c-primary solid 0.2rem;
+    background: none;
+
+    &:first-of-type {
+      border-left: 0;
+    }
+  }
+
   @media (min-width: 501px) and (max-width: 720px) {
     flex-direction: row;
+
+    &__actions {
+      flex-direction: column;
+      border-top: 0;
+      border-left: $c-primary solid 0.2rem;
+    }
+
+    &__actions-btn {
+      border-top: $c-primary solid 0.2rem;
+      border-left: 0;
+
+      &:first-of-type {
+        border-top: 0;
+      }
+    }
   }
 }
 
